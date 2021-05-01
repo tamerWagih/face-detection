@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { url } from '../../App';
 
 class Register extends Component {
   state = {
@@ -20,7 +21,7 @@ class Register extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/register', {
+    fetch(`${url}register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

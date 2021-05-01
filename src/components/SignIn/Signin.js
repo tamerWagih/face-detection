@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { url } from '../../App';
 
 class Signin extends Component {
   state = {
@@ -15,7 +16,7 @@ class Signin extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/signin', {
+    fetch(`${url}signin`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
